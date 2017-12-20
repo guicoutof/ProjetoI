@@ -1,28 +1,42 @@
+<style>
+
+	.homebody{
+		margin: 0px;
+		padding: 0px;
+	}
+
+  .parallax { 
+	background-image: url(./assets/imagens/calendario.jpg);
+	width: 1200px;
+    height: 700px; 
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: grayscale(15%);
+    width: 100%; 
+    margin: auto;
+  }
+  .parallax h1{
+  	text-shadow: 0 0 5px blue, 0 0 8px #3f3f3f;
+    margin: auto;
+    width: 50%;
+    padding-top: 320px;
+    text-align: center;
+    color: white;
+    border:3px;
+  }
+</style>
+
 <div class="homebody">
 
-	<div class="alinhado-centro borda-base espaco-vertical">
-		<h2> Login </h2>
-	</div>	
-	<form method="POST" action="<?= base_url()?>Pessoa/logar">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4 form-group">
-					<input class="form-control" type="text" name="email" placeholder="Email">
-				</div>
-				
-			</div>
-			<div class="row">
-				<div class="col-sm-4 form-group">
-					<input class="form-control" type="password" name="senha" placeholder="Senha">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4 form-group">
-					<button type="submit" class="btn btn-primary pull-right">Entrar</button>
-				</div>
-			</div>
-		</div>
-	</form>
+	<div id="home" class="parallax" >
+  		<h1>Calendario de Eventos iHouse</h1>
+    
+	</div>
+
 
 
 </div>

@@ -1,21 +1,62 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-<div class="homebody">
+
+<style>
+  body{
+    text-align: center;
+  }
+
+  .container {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+  }
+
+  .fonteformulario{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  .botao{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px 0px 10px 0px;
+    padding: 5px;
+    border: 0;
+    display: inline-block;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+  }
+
+  .botao:hover{
+    color: white;
+    background-color: limegreen;
+    border-radius: 10px 0px 10px 0px;
+  }
+</style>
+
+<div class="container">
   <form  method="post" action="<?= base_url()?>Evento/adicionar">          
-    <div class="col-md-8">
+  <div><span class="fonteformulario">Criar Evento</span></div>
+    <div class="col-md-20">
       <div class="row">
         <div class="col-sm-12 form-group">
           <input class="form-control" id="eventonome" name="eventonome" placeholder="Nome do Evento" type="text" required>
         </div>
       </div>
       <div class="row">
-        	<div class="col-sm-12 form-group">
+          <div class="col-sm-12 form-group">
             <input class="form-control" id="eventoendereco" name="eventoendereco" placeholder="Endereco" type="text" required>
-        	</div>
+          </div>
       </div> 
       <div class="row">
-        	<div class="col-sm-6 form-group">
+          <div class="col-sm-6 form-group">
             <input class="form-control" id="eventocidade" name="eventocidade" placeholder="Cidade" type="text" required>
           </div>
           <div class="col-sm-2 form-group">
@@ -26,7 +67,7 @@
           </div>
       </div>
       <div class="row">
-      	<div class="col-sm-3 form-group">
+        <div class="col-sm-3 form-group">
             <input class="form-control" id="eventoinicio" name="eventoinicio" placeholder="Data de Inicio" type="date" required>
           </div>
           <div class="col-sm-3 form-group">
@@ -35,35 +76,36 @@
 
           <div class="col-sm-3 form-group">
             <input class="form-control" id="eventofim" name="eventofim" placeholder="Data de Fim" type="date" required>
-          </div>	
+          </div>  
           <div class="col-sm-3 form-group">
             <input class="form-control" id="eventohfim" name="eventohfim" placeholder="Horário de Término" type="time" required>
           </div>
       </div>
 
       <div class="row">
-      	<div class="col-sm-6 form-group">
-      		<input class="form-control" id="nmax" min="0" name="nmax" placeholder="Nº Máximo de Participantes" type="number" required>
-      	</div>	
-        <div class="col-sm-4 form-group">
-          <input class="form-control" id="valor" min="0" name="valor" placeholder="Valor Ingresso" type="number" step="0.01" required>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="nmax" min="0" name="nmax" placeholder="Nº Máximo de Participantes" type="number" required>
+        </div>
+        <div class="col-sm-6"><input class="form-control" id="valor" min="0" name="valor" placeholder="Valor Ingresso" type="number" step="0.01" required>
         </div>  
-      </div>
-      <div class="row">
-      	<div class="col-sm-12 form-group">
-      		<textarea class="form-control" rows = "5" id= "descricao" name="descricao" placeholder="Descrição"></textarea>
-      	</div>	
       </div>
 
       <div class="row">
-      	<label class="control-label col-sm-4">Inserir Imagens</label>
+        <div class="col-sm-12 form-group">
+          <textarea class="form-control" rows = "5" id= "descricao" placeholder="Descrição"></textarea>
+        </div>  
+      </div>
+
+      <div class="row">
+        <label class="control-label col-sm-4">Inserir Imagens</label>
         <input id="input-b5" name="input-b5[]" type="file" multiple>
       </div>
 
+      <br>
       <div class="row">
         <div class="col-md-12 form-group">
-          <button class="btn btn-primary pull-right" type="submit">Criar Evento</button>
-        </div>
+          <button class="botao" type="submit">Criar Evento</button>
+      </div>
       </div>
     </div>
   </form>
