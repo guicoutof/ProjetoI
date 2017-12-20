@@ -23,6 +23,17 @@ class Pessoa extends CI_Controller {
 			redirect('home');
 		}
 		else{
+			$this->load->library('session');
+
+			$userdados = array(
+						'id' => $result->id,
+						'nome' => $result->nome,
+						'email' => $result->email
+			);
+
+			$this->session->set_userdata($userdados);
+			
+
 			redirect(base_url('pessoa/area'));
 		}
 
@@ -169,6 +180,12 @@ class Pessoa extends CI_Controller {
 	// 	$this->Pessoa_model->apagar($id);
 	// 	redirect(base_url('cadastrar_usuario'));
 	// }
+
+	public function logout(){
+		$this->session->sess_destroy();
+
+		redirect(base_url());
+	}
 
 
 

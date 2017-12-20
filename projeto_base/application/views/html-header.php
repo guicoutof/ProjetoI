@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css');?>">
 	<script type="text/javascript" src=<?php echo base_url('assets/js/jquery.js');?></script>
 	<script type="text/javascript" src=<?php echo base_url('assets/js/bootstrap.min.js');?></script>
-
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.16/r-2.2.1/datatables.min.css"/>
 </head>
 
 

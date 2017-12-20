@@ -31,7 +31,7 @@ body{
 .icone{
   font-size: 20px;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   cursor: pointer;
   padding-left: 10px;
   padding-top: 10px;
@@ -72,6 +72,7 @@ body{
       <div><a class="fontemenu" href="<?= base_url('Home/login') ?>"> <span class="glyphicon glyphicon-user"><span class="fontemenu"> LOGIN</span></span></a></div>
       <div class="">
       <div><a class="fontemenu" href="<?= base_url('Pessoa/index') ?>"> <span class="glyphicon glyphicon-plus"><span class="fontemenu"> CRIAR CONTA</span></span></a></div>
+      <div><a class="fontemenu" href="<?= base_url('Pessoa/logout') ?>"> <span class="glyphicon glyphicon-off"><span class="fontemenu"> LOGOUT</span></span></a></div>
     </nav>
   </div>
 

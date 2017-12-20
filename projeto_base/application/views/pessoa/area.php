@@ -1,5 +1,4 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.16/r-2.2.1/datatables.min.css"/>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/r-2.2.1/datatables.min.js"></script>
+
 
 <div id="homebody">
 <!-- Uma table padrão. Acustume-se, sempre usamos table para listar dados e é sempre assim -->
@@ -32,7 +31,7 @@
 				echo "<td>".$evento->hora_ini."</td>";
 				echo "<td>".$evento->hora_fim."</td>";
 				echo "<td>".$evento->valor."</td>";
-				echo "<td><a href=".base_url('evento/registrar_participante')." class='btn btn-success btn-sm'>Participar</a></td>";
+				echo "<td><a href=".base_url('evento/realizarPagamento')." class='btn btn-success btn-sm'>Participar</a></td>";
 			}
 			?>
 		</tbody>
@@ -51,8 +50,19 @@
 
 
 </div>
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/r-2.2.1/datatables.min.js"></script>
+
 <script>
-	
+function tdclick($data){
+<?
+	$this->session->set_userdata('id_evento',$data);
+?>
+};
+
+
+
+
 $(document).ready(function() {
     $('#eventos').DataTable();
 } );

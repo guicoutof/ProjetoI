@@ -17,6 +17,12 @@ class Evento_model extends CI_Model{
 
 	}
 
+	public function registrarParticipante($data){
+
+		$this->db->insert('participante',$data);
+		return ($this->db->affected_rows() == 1 || $this->db->affected_rows() == 0) ? $this->db->insert_id() : false;
+	}
+
 
 
 }

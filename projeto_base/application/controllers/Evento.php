@@ -20,6 +20,7 @@ class Evento extends CI_Controller {
         $data['nmax_inscritos'] = $this->input->post("nmax");
         $data['descricao'] = $this->input->post("descricao");
         $data['valor'] = $this->input->post("valor");
+        $data['id_criador'] = $this->session->userdata('id');
         //$data['Imagens'] = $this->input->post("pacientepais");
         //$data['Criador_Evento'] = $this->input->post("");
 
@@ -46,5 +47,48 @@ class Evento extends CI_Controller {
         $this->load->view('footer');
         $this->load->view('html-footer');
     }
+
+    public function registrarParticipante(){
+        // JA APROVADO O PAGAMENTO
+
+        $data['id_participante'] = $this->session->userdata('id');
+        $data['nome_participante'] = $this->session->userdata('nome');
+        $data['email_participante'] = $this->session->userdata('email');
+        $data['id_evento'] = $_SESSION['id_evento'];
+
+        $this->load->model('Evento_model');
+        $status = $this->Evento_model->registrarParticipante('data');
+
+        if($status){
+            echo 'Participante confirmado';
+        }else{
+            echo 'Participante nao confirmado';
+        }
+        
+    }
+
+
+    public function realizarPagamento(){
+        $this->load->view('html-header');
+        $this->load->view('header');
+        $this->load->view('evento/pagamento');
+        $this->load->view('footer');
+        $this->load->view('html-footer');
+    }
+
+
+    public function pagamentoBoleto(){
+
+        redirect(base_url('Evento/registrarParticipante'));
+
+    }
+
+    public function pagamentoCartao(){
+
+        redirect(base_url('Evento/registrarParticipante'));
+
+    }
+
+
 
 }
