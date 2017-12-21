@@ -55,7 +55,7 @@ class Evento extends CI_Controller {
     public function registrarParticipante($dados){
         // JA APROVADO O PAGAMENTO
 
-        $data['id_participante'] = $this->session->userdata('id');
+        $data['id_pessoa'] = $this->session->userdata('id');
         $data['nome_participante'] = $this->session->userdata('nome');
         $data['email_participante'] = $this->session->userdata('email');
         $data['id_evento'] = $dados['id_evento'];

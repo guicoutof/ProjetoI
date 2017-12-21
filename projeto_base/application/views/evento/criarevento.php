@@ -132,7 +132,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12 form-group">
-          <textarea class="form-control" rows = "5" id= "descricao" placeholder="Descrição"></textarea>
+          <textarea class="form-control" rows = "5" id= "descricao" name="descricao" placeholder="Descrição"></textarea>
         </div>  
       </div>
       <div class="row">

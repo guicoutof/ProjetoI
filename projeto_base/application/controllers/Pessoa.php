@@ -93,7 +93,7 @@ class Pessoa extends CI_Controller {
 
 			$this->load->model('Pessoa_model');
 			if($this->Pessoa_model->inserir($dados)){
-				redirect($_SERVER['REQUEST_URI'], 'refresh'); 
+				$this->cadastro();
 			}
 			else{ 
 				redirect(base_url());
