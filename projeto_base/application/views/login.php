@@ -74,7 +74,6 @@
   	}
 
 	
-	/*background-image: url(../assets/imagens/back-calen.jpg);*/
 	
 </style>
 

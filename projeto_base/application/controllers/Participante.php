@@ -1,4 +1,4 @@
-<?php if (! defined('BASEPATH')) exit('No direct script access allowed'); // linha de proteção ao controller
+<?php if (! defined('BASEPATH')) exit('No direct script access allowed'); 
 
 class Participante extends CI_Controller {
 

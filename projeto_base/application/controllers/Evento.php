@@ -9,8 +9,8 @@ class Evento extends CI_Controller {
         // nome,endereco,cidade,estado,pais,inicio,fim,hr ini, hr fim,n max inscri, descri, imagens
 
         $data['nome'] = $this->input->post("eventonome");
-        $data['endereco'] = $this->input->post("eventoendereco");// pega via post o email que venho do formulario
-        $data['cidade'] = $this->input->post("eventocidade"); // pega via post a senha que venho do formulario
+        $data['endereco'] = $this->input->post("eventoendereco");
+        $data['cidade'] = $this->input->post("eventocidade");
         $data['estado'] = $this->input->post("eventoestado");
         $data['pais'] = $this->input->post("eventopais");
         $data['data_Ini'] = $this->input->post("eventoinicio");
@@ -20,18 +20,15 @@ class Evento extends CI_Controller {
         $data['nmax_inscritos'] = $this->input->post("nmax");
         $data['descricao'] = $this->input->post("descricao");
         $data['valor'] = $this->input->post("valor");
-
-
         $data['id_criador'] = intval($this->session->userdata('id'));
         //$data['Imagens'] = $this->input->post("pacientepais");
 
 
-
-        $this->load->model("Evento_model");// chama o modelo 
+        $this->load->model("Evento_model");
         $status = $this->Evento_model->adicionarEvento($data);
 
         if($status){
-            echo "<script>alert('Evento criado')</script>";
+            //echo "<script>alert('Evento criado')</script>";
             redirect('Participante/area');
         }else{
             echo "<script>alert('Evento não pode ser criado')</script>";

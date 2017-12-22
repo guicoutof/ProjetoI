@@ -1,5 +1,4 @@
-﻿<!-- Esse é o menu, nós sempre utilizamos esse menu, mas nada te impede de utilizar outro. Cada <a> do menu cria os href utilizando a função base_url('caminho'). Essa função aponta a pasta raiz do projeto e depois voce monta o caminho, lembrando da regra pasta_raiz/nome_do_controller/funcao/parametros(opcional) -->
-<!-- Pensando bem, na realidade o menu oficial nao é esse, pois eu tirei a importação do fonte awesome do projeto e o menu ficou feio, mas o negócio é fazer com a certa. Quando for desenvolver algo, peça o menu para alguem. -->
+﻿
 <style>
   .nav-side-menu{
     width: 150px;

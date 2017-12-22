@@ -1,7 +1,7 @@
 
 
 <div id="homebody">
-<!-- Uma table padrão. Acustume-se, sempre usamos table para listar dados e é sempre assim -->
+
 	<table id="eventos" class="table table-hover">
 		<thead>
 			<tr>
@@ -19,7 +19,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		<!-- Aquele foreach basico para percorrer o array de eventos e preencher cada linha da tabela -->
+
 			<?php
 			foreach($eventos as $evento){
 				echo "<tr>";

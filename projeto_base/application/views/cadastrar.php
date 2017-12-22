@@ -2,23 +2,9 @@
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
-<?php 
-
-		// Verificando a existência de uma mensagem de erro via session.
-		//A vantagem de se usar a flashdata é que a session é "temporaria". Após seu uso ela é descartada da memória.
-		if ($this->session->flashdata('sucesso')) { ?>
-		<div class="alert alert-success"> <?= $this->session->flashdata('sucesso') ?> </div>
-		<?php } 
-		if ($this->session->flashdata('erro')) { ?>
-		<div class="alert alert-danger"> <?= $this->session->flashdata('erro') ?> </div>
-	<?php 
-	} 
-?>
-
-
 
 <style>
-	body{ /afeta tudo o que está inline no body/
+	body{ 
 		text-align: center;	
 		background-image: url(../assets/imagens/back.png);
 		padding-top: 0px;
@@ -88,7 +74,7 @@
  	}
 </style>
 
-	<!-- Formulário simples, normal, como qualquer formulário PHP, exceto que a action dele redireciona para pessoa/cadastrar, que é a função no controlador responsavel por recuperar os dados do formulário e realizar o processamento. -->
+
 <br><br><br>
 <body>
 <div class="col-md-12">
